@@ -66,57 +66,58 @@
     <button onclick="q2()">Yes</button>
   </div>
 
-  <script>
-    function wrong(nextFn) {
-  document.getElementById("content").innerHTML = `
-    <h1>❌ Wrong 😏</h1>
-    <button onclick="${nextFn}()">Okay, fine</button>
-  `;
-}
-    function q2() {
-      document.getElementById("content").innerHTML = `
-        <h1>Who has been the best girlfriend? 😌</h1>
-        <button onclick="q3()">Meeee</button>
-        <button onclick="wrong('q3')">Other girls</button>
-      `;
-    }
+ <script>
+  function wrong(nextFn) {
+    document.getElementById("content").innerHTML = `
+      <h1>❌ Wrong 😏</h1>
+      <button onclick="${nextFn}()">Okay, fine</button>
+    `;
+  }
 
-    function q3() {
-      document.getElementById("content").innerHTML = `
-        <h1>How much do you love me?? 💕</h1>
-        <button onclick="q4()">Aloooooootttttttttt</button>
-       <button onclick="wrong('q4')">Chuttak</button>
-      `;
-    }
+  function q2() {
+    document.getElementById("content").innerHTML = `
+      <h1>Who has been the best girlfriend? 😌</h1>
+      <button onclick="q3()">Meeee</button>
+      <button onclick="wrong('q3')">Other girls</button>
+    `;
+  }
 
-    function q4() {
-      document.getElementById("content").innerHTML = `
-        <h1>Do you know the special date coming up? 👀</h1>
-        <button onclick="final()">Yess???</button>
-        <button onclick="wrong('final')">Noo??</button>
-      `;
-    }
+  function q3() {
+    document.getElementById("content").innerHTML = `
+      <h1>How much do you love me?? 💕</h1>
+      <button onclick="q4()">Aloooooootttttttttt</button>
+      <button onclick="wrong('q4')">Chuttak</button>
+    `;
+  }
 
-    function final() {
-      document.getElementById("content").innerHTML = `
-        <h1>You just made me the happiest 💘<br>Will you be my Valentine? 🌹</h1>
-        <button onclick="showLove()">Yes</button>
+  function q4() {
+    document.getElementById("content").innerHTML = `
+      <h1>Do you know the special date coming up? 👀</h1>
+      <button onclick="final()">Yess???</button>
+      <button onclick="wrong('final')">Noo??</button>
+    `;
+  }
+
+  function final() {
+    document.getElementById("content").innerHTML = `
+      <h1>Will you be my Valentine? 🌹</h1>
       <button onclick="showLove()">Yes</button>
+      <button onclick="showLove()">Yes</button>
+    `;
+  }
 
-      function showLove() {
-  document.getElementById("content").innerHTML = `
-    <h1>Yeyyyy!!! 🎉💖</h1>
-    <img src="yeyyyy.png" alt="Celebration">
-  `;
-}
+  function showLove() {
+    document.getElementById("content").innerHTML = `
+      <h1>Yeyyyy!!! 🎉💖</h1>
+      <img src="yeyyyy.png" alt="Celebration">
+    `;
+  }
+</script>
 
-      `;
-    }
-    
-  </script>
 
 </body>
 </html>
+
 
 
 
