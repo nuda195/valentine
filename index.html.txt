@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💘 A Question for You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #333;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 420px;
+      padding: 20px;
+      animation: fadeIn 0.7s ease;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 18px;
+      margin: 8px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      background: #ff4d6d;
+      color: white;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card" id="content">
+    <h1>Hi love 💖<br>Ready for a tiny question?</h1>
+    <button onclick="q2()">Yes</button>
+  </div>
+
+  <script>
+    function q2() {
+      document.getElementById("content").innerHTML = `
+        <h1>Who has been the best girlfriend? 😌</h1>
+        <button onclick="q3()">Meeee</button>
+        <button onclick="q3()">Other girls</button>
+      `;
+    }
+
+    function q3() {
+      document.getElementById("content").innerHTML = `
+        <h1>How much do you love me?? 💕</h1>
+        <button onclick="q4()">Aloooooootttttttttt</button>
+        <button onclick="q4()">Chuttak</button>
+      `;
+    }
+
+    function q4() {
+      document.getElementById("content").innerHTML = `
+        <h1>Do you know the special date coming up? 👀</h1>
+        <button onclick="final()">Yess???</button>
+        <button onclick="final()">Noo??</button>
+      `;
+    }
+
+    function final() {
+      document.getElementById("content").innerHTML = `
+        <h1>You just made me the happiest 💘<br>Will you be my Valentine? 🌹</h1>
+        <img src="happy.jpg" alt="Happy moment">
+      `;
+    }
+  </script>
+
+</body>
+</html>
