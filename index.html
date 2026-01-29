@@ -67,11 +67,17 @@
   </div>
 
   <script>
+    function wrong(nextFn) {
+  document.getElementById("content").innerHTML = `
+    <h1>❌ Wrong 😏</h1>
+    <button onclick="${nextFn}()">Okay, fine</button>
+  `;
+}
     function q2() {
       document.getElementById("content").innerHTML = `
         <h1>Who has been the best girlfriend? 😌</h1>
         <button onclick="q3()">Meeee</button>
-        <button onclick="q3()">Other girls</button>
+        <button onclick="wrong('q3')">Other girls</button>
       `;
     }
 
@@ -79,7 +85,7 @@
       document.getElementById("content").innerHTML = `
         <h1>How much do you love me?? 💕</h1>
         <button onclick="q4()">Aloooooootttttttttt</button>
-        <button onclick="q4()">Chuttak</button>
+       <button onclick="wrong('q4')">Chuttak</button>
       `;
     }
 
@@ -87,7 +93,7 @@
       document.getElementById("content").innerHTML = `
         <h1>Do you know the special date coming up? 👀</h1>
         <button onclick="final()">Yess???</button>
-        <button onclick="final()">Noo??</button>
+        <button onclick="wrong('final')">Noo??</button>
       `;
     }
 
@@ -104,6 +110,7 @@
 
 </body>
 </html>
+
 
 
 
